@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DevDeck
 
-## Getting Started
+DevDeck is a dynamic portfolio generator that aggregates data from GitHub, CodeChef, Codeforces, and LeetCode. This tool scrapes user profiles from these platforms and creates a comprehensive portfolio.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You can view the live demo of the application hosted on Vercel [here](https://dev-deck.vercel.app/).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Test Credentials
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To explore the features of DevDeck, you can use the following test credentials:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* **Email:** test@gmail.com
+* **Password:** test123
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+* **Dynamic Portfolio Creation:** Automatically generate a dynamic portfolio by scraping data from GitHub, CodeChef, Codeforces, and LeetCode.
+* **User Authentication:** Secure login and signup functionality.
+* **Profile Customization:** Users can customize their profiles with
+additional details and preferences.
+* **Responsive Design:** Mobile-friendly interface ensuring a seamless experience on all devices.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+1. **Sign Up / Login:**
+Use the sign-up form to create a new account or log in using the test credentials provided above.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Link Profiles:**
+Navigate to the profile settings and link your GitHub, CodeChef, Codeforces, and LeetCode profiles by entering your usernames.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Generate Portfolio:**
+The application will scrape the linked profiles and generate a dynamic portfolio displaying your coding achievements and statistics.
+
+## Video Demo 
+
+
