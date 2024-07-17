@@ -35,4 +35,7 @@ The application will scrape the linked profiles and generate a dynamic portfolio
 
 ## Video Demo 
 
+[My App.webm](https://github.com/user-attachments/assets/62f51ac4-bb2d-42c6-b20d-231b0c53d83b)
+
+
 
