@@ -1,95 +1,80 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { useState, useEffect } from "react";
+import { Button, Typography, Space, Card, Layout, Spin, Row, Col } from "antd";
+import { useRouter } from "next/navigation";
+import { UserOutlined, LoginOutlined } from "@ant-design/icons";
+
+const { Title, Paragraph } = Typography;
+const { Header, Content, Footer } = Layout;
 
 export default function Home() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleRedirect = (path) => {
+    setLoading(true);
+    router.push(path);
+  };
+
+  if (loading) {
+    return (
+      <Row justify="center" align="middle" style={{ minHeight: "100vh" }}>
+        <Col>
+          <Spin size="large" />
+        </Col>
+      </Row>
+    );
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <Layout style={{ minHeight: "100vh" }}>
+      <Header style={{ background: "#001529", padding: "0 50px" }}>
+        <Title level={3} style={{ color: "white", margin: "16px 0" }}>
+          My Website
+        </Title>
+      </Header>
+      <Content style={{ padding: "50px" }}>
+        <Row
+          justify="center"
+          align="middle"
+          style={{ minHeight: "calc(100vh - 64px - 70px)" }}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <Col xs={24} sm={20} md={16} lg={12} xl={8}>
+            <Card hoverable>
+              <Space
+                direction="vertical"
+                size="large"
+                style={{ width: "100%", textAlign: "center" }}
+              >
+                <Title level={1}>Welcome to Our Website</Title>
+                <Space size="large">
+                  <Button
+                    type="primary"
+                    size="large"
+                    icon={<LoginOutlined />}
+                    onClick={() => handleRedirect("/login")}
+                  >
+                    Login
+                  </Button>
+                  <Button
+                    size="large"
+                    icon={<UserOutlined />}
+                    onClick={() => handleRedirect("/signup")}
+                  >
+                    Sign Up
+                  </Button>
+                </Space>
+              </Space>
+            </Card>
+          </Col>
+        </Row>
+      </Content>
+    </Layout>
   );
 }

@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.7",
+    "antd": "^5.18.3",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "firebase": "^10.12.2",
+    "next": "14.2.4",
+    "pdfjs-dist": "^4.3.136",
     "react": "^18",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "react-pdf": "^9.0.0",
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
     "eslint": "^8",
