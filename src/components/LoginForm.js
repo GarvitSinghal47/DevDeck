@@ -110,7 +110,7 @@ export default function LoginForm() {
           size="small"
           style={{ width: "100%", textAlign: "center" }}
         >
-          <Text>Don't have an account?</Text>
+          <Text>Don t have an account?</Text>
           <Button type="link" onClick={() => router.push("/signup")}>
             Sign up now
           </Button>
