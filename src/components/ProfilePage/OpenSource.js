@@ -270,7 +270,7 @@ const GithubContributions = ({ userid }) => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <Title level={2}>{user.name}'s Open Source Contributions</Title>
+      <Title level={2}>{user.name} Open Source Contributions</Title>
 
       <Row gutter={16}>
         <Col span={6}>
